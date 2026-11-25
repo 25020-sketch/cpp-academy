@@ -63,6 +63,69 @@ body.light .topbar{background:rgba(248,251,255,.9);border-color:#dce6f0}body.lig
 @media(max-width:560px){.topbar{height:66px}.layout{padding-top:14px}.hero h1{font-size:39px;letter-spacing:-1.6px}.content-card{border-radius:17px}.chapter-head{padding-bottom:16px}.practice-lab{padding:17px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
+
+/* ── Mobile-first fixes: phones and small tablets ─────────── */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+body{-webkit-text-size-adjust:100%;overscroll-behavior-x:none}
+img,svg,video,canvas{max-width:100%;height:auto}
+main,.layout,.content-card,.toolbar,.practice-lab{min-width:0;max-width:100%}
+pre,code{overflow-wrap:anywhere}
+pre{max-width:100%;white-space:pre;overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:normal}
+button,.btn,.navitem{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+button{min-height:40px}
+@media(max-width:700px){
+ .topbar{height:auto;min-height:62px;padding:10px 14px;gap:8px;flex-wrap:wrap}
+ .brand{font-size:15px;gap:8px}.logo{width:34px;height:34px;border-radius:10px;font-size:14px}
+ .toplinks{display:none}
+ .actions{gap:6px}.actions .btn{padding:8px 10px;font-size:12px;min-height:38px}
+ .layout{display:flex;flex-direction:column;gap:14px;padding:12px 12px 42px}
+ .sidebar{position:static;top:auto;height:auto;max-height:none;width:100%;display:block;overflow:visible;padding:9px;border-radius:13px}
+ .side-label,.progressbox{display:none}
+ #chapterNav{display:flex;gap:7px;overflow-x:auto;overflow-y:hidden;padding:2px 1px 7px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+ .navitem{flex:0 0 auto;width:auto;max-width:230px;white-space:nowrap;margin:0;padding:9px 11px;border:1px solid var(--line);font-size:12px;scroll-snap-align:start}
+ .navitem span:last-child{overflow:hidden;text-overflow:ellipsis}
+ .hero{display:block;padding:16px 2px 12px;animation:none}
+ .hero h1{font-size:clamp(32px,9vw,43px);line-height:1.08;letter-spacing:-1.3px;margin:9px 0 12px}
+ .hero p{font-size:14px;line-height:1.6}
+ .hero .btn{width:100%;justify-content:center}
+ .hero-card{display:none}
+ .toolbar{display:flex;flex-direction:column;align-items:stretch;gap:10px;padding:12px;margin:6px 0 14px}
+ .toolbar>div{font-size:14px}.search{width:100%;max-width:none;min-height:44px;font-size:16px}
+ .content-card{padding:16px 14px;border-radius:14px;box-shadow:0 10px 28px rgba(0,0,0,.18)}
+ .chapter-head{display:flex;gap:8px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+ .chapter-head h2{font-size:clamp(23px,6vw,30px);overflow-wrap:anywhere}
+ .chapter-head p{font-size:14px;line-height:1.55}
+ .chapter-icon{font-size:24px;padding:7px;border-radius:11px;flex:0 0 auto}
+ h3{font-size:17px;margin:22px 0 8px}
+ p,li{font-size:14px;line-height:1.65}
+ .callout{padding:11px 12px;font-size:13px}
+ .codebox{margin:12px 0;border-radius:10px;max-width:100%}
+ .codehead{padding:8px 10px;gap:8px}
+ pre{padding:13px;font-size:12px;line-height:1.65}
+ table{font-size:12px}
+ th,td{padding:8px 9px;min-width:78px}
+ .quiz,.practice-lab{padding:14px;margin-top:17px;border-radius:12px}
+ .option{width:100%;min-height:44px;padding:11px;text-align:left;font-size:14px}
+ .lab-actions{display:grid;grid-template-columns:1fr;gap:8px}
+ .lab-actions .btn{width:100%;min-height:44px}
+ .chapter-footer{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+ .chapter-footer .btn{width:100%;min-height:44px;font-size:12px;padding:9px 7px}
+ .chapter-footer #completeBtn{grid-column:1/-1;grid-row:1}
+ footer{padding:24px 8px;font-size:11px}
+}
+@media(max-width:380px){
+ .layout{padding-left:9px;padding-right:9px}
+ .brand{font-size:13px}.actions .btn{font-size:11px;padding:7px 8px}
+ .chapter-head{gap:5px}.chapter-icon{font-size:21px}
+ .chapter-footer{grid-template-columns:1fr}
+ .chapter-footer #completeBtn{grid-column:auto;grid-row:auto}
+}
+@media(orientation:landscape) and (max-height:500px) and (max-width:900px){
+ .topbar{position:relative}.sidebar{max-height:100px;overflow:hidden}
+ #chapterNav{max-height:74px}
+}
+
 </style>
 </head>
 <body>
